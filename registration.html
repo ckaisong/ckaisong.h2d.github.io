@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>h2d</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="icon" sizes="192x192" href="logo.jpg">
+  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon"/>
+  <link rel="apple-touch-icon" href="logo.jpg" type="image/x-icon"/>
+
+	<style>
+	html {
+		scroll-behavior: smooth;
+	}
+	.topnav {
+		height: 90px;
+		text-align: center;		
+		background-color: #ffffff;
+		overflow: hidden;
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		
+	}
+	.btn a {
+		  line-height: 1.5em;
+		  float: right;
+		  color: black;		  
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  font-size: 18px;
+		  background-color: #000000;
+		  border: none;
+		  color: white;
+		  opacity: 1;
+		  transition: 0.3s;
+		  text-align: center;
+		  text-decoration: none;
+		  position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		  border-radius: 12px;
+		  cursor: pointer;
+		  margin: 3px;
+
+		}
+	.logo a {
+		  float: left;
+		  color: black;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		  display: inline-block;
+		}	
+	.content a {
+		  height: 50px;
+		  line-height: 50px;
+		  word-spacing: 10px;
+		  float: center;
+		  color: grey;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		  display: inline-block;
+		  opacity: 1;
+		  transition: 0.3s;
+		}	
+
+	.btn a:hover {
+		  opacity: 0.8
+		}
+	.content a:hover {
+		  opacity: 0.8
+		}
+
+	
+	body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+	.w3-bar,h1,button {
+		font-family: "Montserrat", sans-serif
+		}
+		
+	.signin {
+		text-align:right;
+		display:block;
+		margin-right;
+		}
+	<!--background image -->	
+	.bgimg {
+		background-image: url('/w3images/forestbridge.jpg');
+		min-height: 100%;
+		background-position: center;
+		background-size: cover;
+		}
+		
+	.grid-container {
+	  display: grid;
+	  grid-template-columns: auto auto auto auto;
+	  grid-gap: 50px;
+	  background-color: #ffffff;
+	  padding: 10px;
+	  margin: 5px;
+
+	}
+
+	.grid-container > div {
+	  background-color: rgba(255, 255, 255, 0.8);
+	  text-align: center;
+	  padding: 20px 0;
+	  font-size: 30px;
+	
+	}	
+	 
+	button {   
+        background-color: #000000;   
+        width: 100%;  
+        color: #ffffff;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;
+		opacity: 1;
+		transition: 0.3s;		
+        }
+	button:hover {   
+        opacity: 0.8;   
+		} 		
+	form {   
+        border: 3px solid #f1f1f1;   
+		} 
+		
+	input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid black;   
+        box-sizing: border-box;   
+		}  
+	  
+	
+	.container {   
+        padding: 25px;   
+        background-color: #f1f1f1;  
+		}  
+	</style>
+	
+<body>
+
+<!-- Navbar -->
+
+<div class="topnav top-bar fixed">
+ <div class="logo"><a href="index.html"><img src="logo.jpg" border="0" width="80" height="80"></a> </div>
+	<div class="content">
+		<a href="hardware.html">Hardware</a>
+		<a href="facilities.html">Facilities</a>
+		<a href="anouncements.html">Anouncements</a>
+	</div>
+		<div class="btn">
+		<a type="button" href="signin.html">Sign in</a>
+		<a type="button" href="#aboutus">About</a>
+	</div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+	  <h1 class="w3-margin w3-jumbo">H2D</h1>
+	  <p class="w3-xlarge">Register</p>
+
+</header>
+<!-- First Grid -->
+<div style="background-color:#f2f2f2">
+  <div class="w3-content">
+    <form>  
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" required>  
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required>  
+            <label>Confirm Password : </label>   
+            <input type="password" placeholder="Confirm Password" id="confirm_password" oninput="validatePassword()" required>  
+           	
+			<button type="submit" onclick="validatePassword()">Register</button>  			
+        </div>   
+    </form>     
+  </div>
+</div>
+<script>
+var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+
+
+<!-- Footer -->
+
+<footer id="aboutus" class="w3-container w3-padding-64 w3-center w3-opacity"> 
+<a href="FAQ.html">FAQs</a> 
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ 
+</footer>
+
+
+<script>
+
+</script>
+
+</body>
+</html>

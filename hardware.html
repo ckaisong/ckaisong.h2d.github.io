@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>h2d</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="icon" sizes="192x192" href="logo.jpg">
+  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon"/>
+  <link rel="apple-touch-icon" href="logo.jpg" type="image/x-icon"/>
+
+	<style>
+	html {
+		scroll-behavior: smooth;
+	}
+	.topnav {
+		height: 90px;
+		text-align: center;		
+		background-color: #ffffff;
+		overflow: hidden;
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		
+	}
+	.btn a {
+		  line-height: 1.5em;
+		  float: right;
+		  color: black;		  
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  font-size: 18px;
+		  background-color: #000000;
+		  border: none;
+		  color: white;
+		  opacity: 1;
+		  transition: 0.3s;
+		  text-align: center;
+		  text-decoration: none;
+		  position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		  border-radius: 12px;
+		  cursor: pointer;
+		  margin: 3px;
+
+		}
+	.logo a {
+		  float: left;
+		  color: black;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		  display: inline-block;
+		}	
+	.content a {
+		  height: 50px;
+		  line-height: 50px;
+		  word-spacing: 10px;
+		  float: center;
+		  color: grey;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		  display: inline-block;
+		  opacity: 1;
+		  transition: 0.3s;
+		}	
+
+	.btn a:hover {
+		  opacity: 0.8
+		}
+	.content a:hover {
+		  opacity: 0.8
+		}
+
+	
+	body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+	.w3-bar,h1,button {
+		font-family: "Montserrat", sans-serif
+		}
+		
+	.signin {
+		text-align:right;
+		display:block;
+		margin-right;
+		}
+	<!--background image -->	
+	.bgimg {
+		background-image: url('/w3images/forestbridge.jpg');
+		min-height: 100%;
+		background-position: center;
+		background-size: cover;
+		}
+		
+	.grid-container {
+	  display: grid;
+	  grid-template-columns: auto auto auto auto;
+	  grid-gap: 50px;
+	  background-color: #ffffff;
+	  padding: 10px;
+	  margin: 5px;
+
+	}
+
+	.grid-container > div {
+	  background-color: rgba(255, 255, 255, 0.8);
+	  text-align: center;
+	  padding: 20px 0;
+	  font-size: 30px;
+	
+	}	
+	.img {
+		display: block;
+		max-width:350px;
+		max-height:350px;
+		width: auto;
+		height: auto;
+		float: center;
+	}
+	.info {
+		font-size: 18px;
+		
+	}
+	.machname {
+		font-size: 26px;
+	}
+	
+	.hostnow a {
+		color: #ffffff;		  
+		padding: 12px 16px;
+		text-decoration: none;
+		font-size: 18px;
+		background-color: #000000;
+		border: none;
+		color: white;
+		opacity: 1;
+		transition-duration: 0.3s;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 12px;
+		cursor: pointer;
+		margin: 3px;
+	}
+	.hostnow a:hover {
+		  opacity: 0.8
+	}
+	.months {
+		width: 100px;
+		height: 40px;
+	}
+	.span {
+		font-size: 20px;
+		color: red;
+	}
+	.w3-content text{
+		font-size:20px;
+	}
+	input::placeholder {
+		opacity : 0.5
+	}
+	
+	</style>
+	
+<body>
+
+<!-- Navbar -->
+
+<div class="topnav top-bar fixed">
+ <div class="logo"><a href="index.html"><img src="logo.jpg" border="0" width="80" height="80"></a> </div>
+	<div class="content">
+		<a href="hardware.html">Hardware</a>
+		<a href="facilities.html">Facilities</a>
+		<a href="anouncements.html">Anouncements</a>
+	</div>
+		<div class="btn">
+		<a type="button" href="signin.html">Sign in</a>
+		<a type="button" href="#aboutus">About</a>
+	</div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+	  <h1 class="w3-margin w3-jumbo">H2D</h1>
+	  <p class="w3-xlarge">Hardwares</p>
+
+</header>
+<!-- First Grid -->
+<div style="background-color:#f2f2f2">
+  <div class="w3-content">
+    <div class="grid-container">
+	  <div class="hostnow">
+	  <label class="machname">AntMiner S5 ~1155Gh/s @ 0.51W/Gh 28nm ASIC Bitcoin Miner</label><br>
+	  <label class="info" style="float:right"><b>Price per month: $73<br>Hashrate:72 TH/s<br>Energy Cons: 3050 Watts</b></label>
+	  <img class="img" src="crptomach.jpg">
+	  <br>
+	  <text style="font-size:20px">Select duration </text><input class="months" id="price1" type="number" pattern="^0[1-9]|[1-9]\d$" required min="1" max="99" placeholder="1-99" oninput="calprice1()"></input><text>month(s)</text>
+	  <text style="font-size:20px">for SGD</text><span class="span" id="calprice1"></span><br>
+	  <a class="hostnow" onclick="checkout1()">Host now</a>
+	  </div>
+	
+	</div>
+	<div class="grid-container">
+	  <div class="hostnow">
+	  <label class="machname">New Innosilicon A10pro 6G 720MH Most Profitable Asic Miner ETH Ethereum Mining Machine in Stock Much Profitable Than Antminer S19pro 110th Include Bitmain APW7 PSU</label></br>
+	  <label class="info" style="float:right"><b>Price per month: $83<br>Hashrate:86 TH/s<br>Energy Cons: 3150 Watts</b></label>
+	  <img class="img" src="crptomach2.jpg"><br>
+	  <text style="font-size:20px">Select duration </text><input class="months" id="price2" type="number" pattern="^0[1-9]|[1-9]\d$" required min="1" max="99" placeholder="1-99" oninput="calprice2()"></input><text>month(s)</text>
+	  <text style="font-size:20px">for SGD</text><span class="span" id="calprice2"></span><br>
+	  <a class="hostnow" onclick="checkout2()">Host now</a>
+	  </div>
+	
+	</div>
+	<div class="grid-container">
+	  <div class="hostnow">
+	  <label class="machname">Eth-Bull-High-Hashrate-8GPU-Ethereum-Miner-Z1-270mh-Eth-Mining-Machine</label><br>
+	  <label class="info" style="float:right"><b>Price per month: $93<br>Hashrate:96 TH/s<br>Energy Cons: 3250 Watts</b></label>
+	  <img class="img" src="Eth-Bull-High-Hashrate-8GPU-Ethereum-Miner-Z1-270mh-Eth-Mining-Machine-in-Stock.jpg"><br>	  
+	  <text style="font-size:20px">Select duration </text><input class="months" id="price3" type="number" pattern="^0[1-9]|[1-9]\d$" required min="1" max="99" placeholder="1-99" oninput="calprice3()"></input><text>month(s)</text>
+	  <text style="font-size:20px">for SGD</text><span class="span"id="calprice3"></span><br>
+	  <a class="hostnow" onclick="checkout3()">Host now</a>
+	  </div>
+	
+	</div>
+
+    <div class="w3-third w3-center">
+      <i class="w3-padding-64 w3-text-red"></i>
+    </div>
+	
+  </div>
+</div>
+
+
+<script>
+var x = document.getElementById('price2').value;
+var x = document.getElementById('price1').value;
+var x = document.getElementById('price3').value;
+function calprice1() {
+	var x = document.getElementById('price1').value;
+	document.getElementById("calprice1").innerHTML= x*73;
+	return
+}
+
+function calprice2() {
+	var x = document.getElementById('price2').value;
+	document.getElementById("calprice2").innerHTML= x*83;
+
+}
+
+function calprice3() {
+	var x = document.getElementById('price3').value;
+	document.getElementById("calprice3").innerHTML= x*93;
+
+}
+
+function checkout1() {	
+	var span = x*73;
+	span = document.getElementById("calprice1").innerHTML;
+	if(span==""){
+	alert("Please enter hosting duration (months)");
+	}
+	else{
+	alert('Total cost: SGD ' + span);
+	}
+
+}
+function checkout2() {	
+	var span = x*83;
+	span = document.getElementById("calprice2").innerHTML;
+	if(span==""){
+	alert("Please enter hosting duration (months)");
+	}
+	else{
+	alert('Total cost: SGD ' + span);
+	}
+
+}
+function checkout3() {	
+	var span = x*93;
+	span = document.getElementById("calprice3").innerHTML;
+	if(span==""){
+	alert("Please enter hosting duration (months)");
+	}
+	else{
+	alert('Total cost: SGD ' + span);
+	}
+
+}
+
+</script>
+
+
+<!-- Footer -->
+
+<footer id="aboutus" class="w3-container w3-padding-64 w3-center w3-opacity"> 
+<a href="FAQ.html">FAQs</a> 
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ 
+</footer>
+
+
+<script>
+
+</script>
+
+</body>
+</html>
