@@ -11,7 +11,7 @@
     <link href="assets/bootstrap-4.6.0-dist/css/bootstrap.min.css" rel="stylesheet">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/8472362f81.js"></script>
     <link href="assets/css/theme.css" rel="stylesheet">
-    <link href="assets/css/hardware.css" rel="stylesheet">
+    <link href="assets/css/cloudMining.css" rel="stylesheet">
     <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
 
 </head>
@@ -38,10 +38,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="cloudMining.html">Cloud Mining</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="hardware.html">Hardware</a>
             </li>
             <li class="nav-item">
@@ -58,52 +58,57 @@
     </div>
 </nav>
 
-<section class="h-100 pt-6" id="hardware">
+<section class="h-100 pt-6" id="cloudMining">
     <div class="bg-holder"
          style="background-image:url(assets/images/background4.png);background-position:bottom center;background-size:cover;">
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 mx-auto text-center">
-                <h5 class="mb-3 fs-3 header">Mining Hardware</h5>
+            <div class="col-lg-7 text-left">
+                <h5 class="mb-3 fs-6 header">Antminer S19 Pro</h5>
             </div>
         </div>
         <div class="row flex-center">
             <div class="col-12 col-lg-12">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 mb-4">
-                        <div class="card card-bg h-100 px-1 pt-2">
+                    <div class="col-12 col-md-12 col-lg-6 my-4">
+                        <div class="card card-bg h-100 px-1 ">
                             <div class="text-center">
-                                <div class="card-img-top">
-                                    <img alt="services" class="my-3" src="assets/images/antminerS19.png"
-                                         width="60%"/>
+                                <div class="card-body">
+                                    <img alt="hardware1" class="my-3" src="assets/images/antminerS19.png"
+                                         width="80%"/>
                                 </div>
-                                <div class="card-body text-left">
-                                    <h6 class="font-weight-bold fs-1">Antminer S19 Pro</h6>
-                                    <p class="mt-3 mb-md-0 mb-lg-1">
-                                        Price: <b>$5800</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Hashrate: <b>74 TH/s</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Energy Cons: <b>3404 Watts</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Minimum Order: <b>1 Unit</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Price: <b>$5800</b>
-                                    </p>
-                                    <div class="card-footer row">
-                                        <!--                                    <a class="btn btn-lg btn-primary px-1 col-6" href="#" role="button">Register Interest <i-->
-                                        <!--                                            class="fas fa-arrow-right"></i></a> -->
-                                        <a class="btn btn-lg btn-primary px-1 col-6" data-target="#myModal"
-                                           data-toggle="modal">Register Interest</a>
-                                        <a class="btn btn-lg btn-outline-primary px-1  col-5 offset-1"
-                                           href="hardwareDetails.html" role="button">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6 my-4">
+                        <div class="card card-bg h-100 px-1">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-theme">Earnings Breakdown</h6>
+                            </div>
+                            <div class="card-body">
+                                <p class="mb-0" style="text-decoration: underline">BTC Mined Daily:</p>
+                                <p class="font-weight-bold">0.0019BTC = $36.956</p>
+                                <p class="mb-0" style="text-decoration: underline">BTC Value/ Day:</p>
+                                <p class="font-weight-bold">0.0019BTC</p>
+                                <p class="mb-0" style="text-decoration: underline">BTC Value Per Month:</p>
+                                <p class="font-weight-bold">0.19BTC</p>
+                                <hr>
+                                <p class="mb-0" style="text-decoration: underline">Hash Rate:</p>
+                                <div class="row">
+                                    <div class="range-wrap col-8 pl-0">
+                                        <label class="sr-only" for="range2">Range 1</label>
+                                        <input class="range form-control-range " id="range2"
+                                               max="200" min="3" onchange="rangePrimary.value=value" type="range"
+                                               value="100">
+                                        <output class="bubble"></output>
                                     </div>
+                                    <label class="sr-only" for="rangePrimary"></label>
+                                    <input class="form-control col-3" id="rangePrimary" readonly type="text"
+                                           value="100"/>
                                 </div>
+                                <a class="btn btn-lg btn-primary" href="#">Purchase Now</a>
+
                             </div>
                         </div>
                     </div>
@@ -176,35 +181,72 @@
         </div>
     </div>
 </footer>
-<div class="modal" id="myModal" role="dialog" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Register Your Interest Today!</h5>
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-center">
-                <p>We are excited to have you here with us.</p>
-                <p>Leave your email address here to be notified of our launch.</p>
-                <form action="" class="">
-                    <label class="sr-only" for="email">Email Address</label>
-                    <input class="form-control col-10 mx-auto" id="email" placeholder="Email Address" required
-                           type="email">
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                <button class="btn btn-primary" type="button">Submit</button>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 <script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="assets/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+    const allRanges = document.querySelectorAll(".range-wrap");
+    allRanges.forEach(wrap => {
+        const range = wrap.querySelector(".range");
+        const bubble = wrap.querySelector(".bubble");
 
+        range.addEventListener("input", () => {
+            setBubble(range, bubble);
+        });
+        setBubble(range, bubble);
+    });
+
+    function setBubble(range, bubble) {
+        const val = range.value;
+        const min = range.min ? range.min : 0;
+        const max = range.max ? range.max : 100;
+        const newVal = Number(((val - min) * 100) / (max - min));
+        bubble.innerHTML = val;
+
+        // Sorta magic numbers based on size of the native UI thumb
+        bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.35}px))`;
+    }
+</script>
+<script crossorigin="anonymous"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: 'USD',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
 </html>

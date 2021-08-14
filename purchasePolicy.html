@@ -11,7 +11,7 @@
     <link href="assets/bootstrap-4.6.0-dist/css/bootstrap.min.css" rel="stylesheet">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/8472362f81.js"></script>
     <link href="assets/css/theme.css" rel="stylesheet">
-    <link href="assets/css/hardware.css" rel="stylesheet">
+    <link href="assets/css/privacyPolicy.css" rel="stylesheet">
     <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
 
 </head>
@@ -35,13 +35,13 @@
     </button>
     <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar">
         <ul class="navbar-nav mx-auto text-center">
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="cloudMining.html">Cloud Mining</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="hardware.html">Hardware</a>
             </li>
             <li class="nav-item">
@@ -52,67 +52,61 @@
             </li>
         </ul>
         <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
-            <a class="btn btn-primary ml-2" href="login.html">Sign In</a>
-            <!--            <a class="btn btn-primary ml-2" href="#" data-toggle="modal" data-target="#myModal">Sign In</a>-->
+            <a class="btn btn-primary ml-2" href="#">Sign In</a>
         </ul>
     </div>
 </nav>
 
-<section class="h-100 pt-6" id="hardware">
-    <div class="bg-holder"
-         style="background-image:url(assets/images/background4.png);background-position:bottom center;background-size:cover;">
-    </div>
+<section class="h-100 pt-6" id="privacyPolicy">
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 mx-auto text-center">
-                <h5 class="mb-3 fs-3 header">Mining Hardware</h5>
+            <div class="col-lg-6 mx-auto text-center">
+                <h5 class="mb-3 fs-3 header">Purchase Policy</h5>
             </div>
         </div>
-        <div class="row flex-center">
-            <div class="col-12 col-lg-12">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 mb-4">
-                        <div class="card card-bg h-100 px-1 pt-2">
-                            <div class="text-center">
-                                <div class="card-img-top">
-                                    <img alt="services" class="my-3" src="assets/images/antminerS19.png"
-                                         width="60%"/>
-                                </div>
-                                <div class="card-body text-left">
-                                    <h6 class="font-weight-bold fs-1">Antminer S19 Pro</h6>
-                                    <p class="mt-3 mb-md-0 mb-lg-1">
-                                        Price: <b>$5800</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Hashrate: <b>74 TH/s</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Energy Cons: <b>3404 Watts</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Minimum Order: <b>1 Unit</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Price: <b>$5800</b>
-                                    </p>
-                                    <div class="card-footer row">
-                                        <!--                                    <a class="btn btn-lg btn-primary px-1 col-6" href="#" role="button">Register Interest <i-->
-                                        <!--                                            class="fas fa-arrow-right"></i></a> -->
-                                        <a class="btn btn-lg btn-primary px-1 col-6" data-target="#myModal"
-                                           data-toggle="modal">Register Interest</a>
-                                        <a class="btn btn-lg btn-outline-primary px-1  col-5 offset-1"
-                                           href="hardwareDetails.html" role="button">More Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-9 mx-auto">
+                <h5 class="font-weight-bold">Warranty:</h5>
+                <p>
+                    For new units, an official manufacturer warranty is provided. Please check the warranty rules
+                    from the manufacturer's official <a href="https://www.shopify.com/legal/terms">website</a>.
+
+                </p>
+                <h5 class="font-weight-bold">Refunds:</h5>
+                <p>
+                    Hash2day does not provide refunds for units purchased from Hash2day. Any machine issues need
+                    to be taken up with the respective ASIC manufacturer.
+
+                </p>
+                <h5 class="font-weight-bold">Note 1:</h5>
+                <p>
+                    The unit hashrate is estimated, the final unit hashrate may be changed according to production.
+                    The total hashrate will be no less than the amount stated on the invoice.
+                </p>
+
+                <h5 class="font-weight-bold">Note 2:</h5>
+                <p>
+                    he price of cryptocurrency mining machines has to be adjusted frequently in accordance with
+                    variables
+                    like the exchange rate of the cryptocurrency with fiat, the cryptocurrency's network difficulty,
+                    or the expected difficulty increase. Refund requests based on price changes WILL NOT be honored.
+                    to say no.
+                </p>
+                <h5 class="font-weight-bold">Note 3: </h5>
+                <p>
+                    Refund requests based on shipment delay WILL NOT be accepted if delay is caused by the manufacturer.
+                </p>
+                <h5 class="font-weight-bold">Note 4:</h5>
+                <p>
+                    By paying for this invoice and paying the security deposit, you are agreeing to the Hash2day Hosting
+                    Terms and Conditions. The Terms and Conditions are available on request.
+
+                </p>
             </div>
         </div>
+
     </div>
 </section>
-
 
 <footer class="footer p-3">
     <div class="container">
@@ -176,35 +170,11 @@
         </div>
     </div>
 </footer>
-<div class="modal" id="myModal" role="dialog" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Register Your Interest Today!</h5>
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-center">
-                <p>We are excited to have you here with us.</p>
-                <p>Leave your email address here to be notified of our launch.</p>
-                <form action="" class="">
-                    <label class="sr-only" for="email">Email Address</label>
-                    <input class="form-control col-10 mx-auto" id="email" placeholder="Email Address" required
-                           type="email">
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                <button class="btn btn-primary" type="button">Submit</button>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 <script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="assets/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+
 
 </html>

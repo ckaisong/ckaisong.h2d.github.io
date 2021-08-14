@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
@@ -11,10 +12,11 @@
     <link href="assets/bootstrap-4.6.0-dist/css/bootstrap.min.css" rel="stylesheet">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/8472362f81.js"></script>
     <link href="assets/css/theme.css" rel="stylesheet">
-    <link href="assets/css/hardware.css" rel="stylesheet">
+    <link href="assets/css/auth.css" rel="stylesheet">
     <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
 
 </head>
+
 <body>
 <nav class="navbar navbar-light navbar-expand-md bg-light fixed-top justify-content-md-center">
     <a class="navbar-brand mr-0" href="index.html">
@@ -35,13 +37,13 @@
     </button>
     <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar">
         <ul class="navbar-nav mx-auto text-center">
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="cloudMining.html">Cloud Mining</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="hardware.html">Hardware</a>
             </li>
             <li class="nav-item">
@@ -53,66 +55,504 @@
         </ul>
         <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
             <a class="btn btn-primary ml-2" href="login.html">Sign In</a>
-            <!--            <a class="btn btn-primary ml-2" href="#" data-toggle="modal" data-target="#myModal">Sign In</a>-->
         </ul>
     </div>
 </nav>
 
-<section class="h-100 pt-6" id="hardware">
-    <div class="bg-holder"
-         style="background-image:url(assets/images/background4.png);background-position:bottom center;background-size:cover;">
-    </div>
+<section class="h-100 pt-6" id="signup">
+    <div class="bg-holder bg-size"
+         style="background-image:url(assets/images/contactBg.png);background-size: cover; background-position:right bottom;"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-7 mx-auto text-center">
-                <h5 class="mb-3 fs-3 header">Mining Hardware</h5>
-            </div>
-        </div>
-        <div class="row flex-center">
-            <div class="col-12 col-lg-12">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 mb-4">
-                        <div class="card card-bg h-100 px-1 pt-2">
-                            <div class="text-center">
-                                <div class="card-img-top">
-                                    <img alt="services" class="my-3" src="assets/images/antminerS19.png"
-                                         width="60%"/>
-                                </div>
-                                <div class="card-body text-left">
-                                    <h6 class="font-weight-bold fs-1">Antminer S19 Pro</h6>
-                                    <p class="mt-3 mb-md-0 mb-lg-1">
-                                        Price: <b>$5800</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Hashrate: <b>74 TH/s</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Energy Cons: <b>3404 Watts</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Minimum Order: <b>1 Unit</b>
-                                    </p>
-                                    <p class="mb-md-0 mb-lg-1">
-                                        Price: <b>$5800</b>
-                                    </p>
-                                    <div class="card-footer row">
-                                        <!--                                    <a class="btn btn-lg btn-primary px-1 col-6" href="#" role="button">Register Interest <i-->
-                                        <!--                                            class="fas fa-arrow-right"></i></a> -->
-                                        <a class="btn btn-lg btn-primary px-1 col-6" data-target="#myModal"
-                                           data-toggle="modal">Register Interest</a>
-                                        <a class="btn btn-lg btn-outline-primary px-1  col-5 offset-1"
-                                           href="hardwareDetails.html" role="button">More Details</a>
+        <div class="row align-items-center text-center" style="display: inline">
+            <div class="col-md-9 col-lg-7 py-6 mx-auto">
+                <div class="card card- card-bg">
+                    <div class="card-body">
+                        <p class="font-weight-bold fs-3"> Register Account </p>
+                        <form action="register_process.php" class="form" method="POST" novalidate>
+                            <div class="row">
+                                <div class="input-group mb-3 col-12 col-md-6">
+                                    <label class="sr-only" for="inputFName">First Name</label>
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="FName">
+                                                <i class="fas fa-user"></i>
+                                            </span>
                                     </div>
+                                    <input aria-describedby="fName"
+                                           class="form-control rounded-pill-input border-white"
+                                           id="inputFName" 
+										   name="inputFName"
+                                           pattern="[a-zA-z ,.'/-]+"
+                                           placeholder="First Name"
+                                           required
+                                           type="text"/>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please check your first name.</div>
+                                </div>
+                                <div class="input-group mb-3 col-12 col-md-6">
+                                    <label class="sr-only" for="inputLName">Last Name</label>
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="LName">
+                                                <i class="fas fa-user"></i>
+                                            </span>
+                                    </div>
+                                    <input aria-describedby="lName"
+                                           class="form-control rounded-pill-input border-white"
+                                           id="inputLName" name="inputLName"
+                                           pattern="[a-zA-z ,.'-]+"
+                                           placeholder="Last Name"
+                                           required
+                                           type="text"/>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please check your last name.</div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="row">
+                                <div class="input-group mb-3 col-12 col-md-6">
+                                    <label class="sr-only" for="inputDOB">Date of Birth</label>
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="DOB">
+                                                <i class="fas fa-birthday-cake"></i>
+                                            </span>
+                                    </div>
+                                    <input aria-describedby="DOB"
+                                           class="form-control rounded-pill-input border-white"
+                                           id="inputDOB" name="inputDOB"
+                                           onblur="(this.type='text')"
+                                           onfocus="(this.type='date')"
+                                           placeholder="Date of Birth"
+                                           required
+                                           type="text"/>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please select your date of birth.</div>
+                                </div>
+                                <div class="input-group mb-3 col-12 col-md-6">
+                                    <label class="sr-only" for="inputEmail">Email</label>
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="email">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                    </div>
+                                    <input aria-describedby="email"
+                                           class="form-control rounded-pill-input border-white"
+                                           id="inputEmail" name="inputEmail"
+                                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
+                                           placeholder="Email"
+                                           required
+                                           type="email"/>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please enter your Email address.</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-3 col-12 col-md-6">
+                                    <label class="sr-only" for="inputPassword">Password</label>
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="password">
+                                                <i class="fas fa-key"></i>
+                                            </span>
+                                    </div>
+                                    <input aria-describedby="email"
+                                           class="form-control rounded-pill-input border-white"
+                                           id="inputPassword" name="inputPassword"
+                                           pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+                                           placeholder="Password"
+                                           required
+                                           type="password"/>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Minimum 8 has up/lowercase number and symbols</div>
+                                </div>
+                                <div class="input-group mb-3 col-12 col-md-6">
+                                    <label class="sr-only" for="inputConfirmPassword">Confirm Password</label>
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend"
+                                                  id="cfmpassword">
+                                                <i class="fas fa-key"></i>
+                                            </span>
+                                    </div>
+                                    <input aria-describedby="email"
+                                           class="form-control rounded-pill-input border-white"
+                                           id="inputConfirmPassword" name="inputConfirmPassword"
+                                           pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+                                           placeholder="Confirm Password"
+                                           required
+                                           type="password"/>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Password not match.</div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="sr-only" for="inputStreet">Street</label>
+                                <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="Street">
+                                                <i class="fas fa-map-marked-alt"></i>
+                                            </span>
+                                </div>
+                                <input aria-describedby="Street"
+                                       class="form-control rounded-pill-input border-white"
+                                       id="inputStreet" name="inputStreet"
+                                       pattern="^(?:[\w-]+ ?).*$"
+                                       placeholder="Street"
+                                       required
+                                       type="text"/>
+                                <div class="valid-feedback">Looks Good!</div>
+                                <div class="invalid-feedback">Please enter a street.</div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="sr-only" for="inputCity">City</label>
+                                <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="City">
+                                                <i class="fas fa-map-marked-alt"></i>
+                                            </span>
+                                </div>
+                                <input aria-describedby="City"
+                                       class="form-control rounded-pill-input border-white"
+                                       id="inputCity" name="inputCity"
+                                       pattern="[A-z.,]{1,80}"
+                                       placeholder="City"
+                                       required
+                                       type="text"/>
+                                <div class="valid-feedback">Looks Good!</div>
+                                <div class="invalid-feedback">Please enter your city.</div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-3 col-12 col-md-6">
+                                    <label class="sr-only" for="inputCountry">Country</label>
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="Country">
+                                                <i class="fas fa-globe-asia"></i>
+                                            </span>
+                                    </div>
+                                    <input aria-describedby="Country"
+                                           class="form-control rounded-pill-input border-white"
+                                           id="inputCountry" list="countryList"
+                                           name="inputCountry"
+                                           placeholder="Country"
+                                           required/>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please select your country.</div>
+                                    <datalist id="countryList">
+                                        <option value="Afganistan">Afghanistan</option>
+                                        <option value="Albania">Albania</option>
+                                        <option value="Algeria">Algeria</option>
+                                        <option value="American Samoa">American Samoa</option>
+                                        <option value="Andorra">Andorra</option>
+                                        <option value="Angola">Angola</option>
+                                        <option value="Anguilla">Anguilla</option>
+                                        <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Armenia">Armenia</option>
+                                        <option value="Aruba">Aruba</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Austria">Austria</option>
+                                        <option value="Azerbaijan">Azerbaijan</option>
+                                        <option value="Bahamas">Bahamas</option>
+                                        <option value="Bahrain">Bahrain</option>
+                                        <option value="Bangladesh">Bangladesh</option>
+                                        <option value="Barbados">Barbados</option>
+                                        <option value="Belarus">Belarus</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="Belize">Belize</option>
+                                        <option value="Benin">Benin</option>
+                                        <option value="Bermuda">Bermuda</option>
+                                        <option value="Bhutan">Bhutan</option>
+                                        <option value="Bolivia">Bolivia</option>
+                                        <option value="Bonaire">Bonaire</option>
+                                        <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                                        <option value="Botswana">Botswana</option>
+                                        <option value="Brazil">Brazil</option>
+                                        <option value="British Indian Ocean Ter">
+                                            British Indian Ocean Ter
+                                        </option>
+                                        <option value="Brunei">Brunei</option>
+                                        <option value="Bulgaria">Bulgaria</option>
+                                        <option value="Burkina Faso">Burkina Faso</option>
+                                        <option value="Burundi">Burundi</option>
+                                        <option value="Cambodia">Cambodia</option>
+                                        <option value="Cameroon">Cameroon</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Canary Islands">Canary Islands</option>
+                                        <option value="Cape Verde">Cape Verde</option>
+                                        <option value="Cayman Islands">Cayman Islands</option>
+                                        <option value="Central African Republic">
+                                            Central African Republic
+                                        </option>
+                                        <option value="Chad">Chad</option>
+                                        <option value="Channel Islands">Channel Islands</option>
+                                        <option value="Chile">Chile</option>
+                                        <option value="China">China</option>
+                                        <option value="Christmas Island">Christmas Island</option>
+                                        <option value="Cocos Island">Cocos Island</option>
+                                        <option value="Colombia">Colombia</option>
+                                        <option value="Comoros">Comoros</option>
+                                        <option value="Congo">Congo</option>
+                                        <option value="Cook Islands">Cook Islands</option>
+                                        <option value="Costa Rica">Costa Rica</option>
+                                        <option value="Cote DIvoire">Cote DIvoire</option>
+                                        <option value="Croatia">Croatia</option>
+                                        <option value="Cuba">Cuba</option>
+                                        <option value="Curaco">Curacao</option>
+                                        <option value="Cyprus">Cyprus</option>
+                                        <option value="Czech Republic">Czech Republic</option>
+                                        <option value="Denmark">Denmark</option>
+                                        <option value="Djibouti">Djibouti</option>
+                                        <option value="Dominica">Dominica</option>
+                                        <option value="Dominican Republic">Dominican Republic</option>
+                                        <option value="East Timor">East Timor</option>
+                                        <option value="Ecuador">Ecuador</option>
+                                        <option value="Egypt">Egypt</option>
+                                        <option value="El Salvador">El Salvador</option>
+                                        <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                        <option value="Eritrea">Eritrea</option>
+                                        <option value="Estonia">Estonia</option>
+                                        <option value="Ethiopia">Ethiopia</option>
+                                        <option value="Falkland Islands">Falkland Islands</option>
+                                        <option value="Faroe Islands">Faroe Islands</option>
+                                        <option value="Fiji">Fiji</option>
+                                        <option value="Finland">Finland</option>
+                                        <option value="France">France</option>
+                                        <option value="French Guiana">French Guiana</option>
+                                        <option value="French Polynesia">French Polynesia</option>
+                                        <option value="French Southern Ter">French Southern Ter</option>
+                                        <option value="Gabon">Gabon</option>
+                                        <option value="Gambia">Gambia</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="Ghana">Ghana</option>
+                                        <option value="Gibraltar">Gibraltar</option>
+                                        <option value="Great Britain">Great Britain</option>
+                                        <option value="Greece">Greece</option>
+                                        <option value="Greenland">Greenland</option>
+                                        <option value="Grenada">Grenada</option>
+                                        <option value="Guadeloupe">Guadeloupe</option>
+                                        <option value="Guam">Guam</option>
+                                        <option value="Guatemala">Guatemala</option>
+                                        <option value="Guinea">Guinea</option>
+                                        <option value="Guyana">Guyana</option>
+                                        <option value="Haiti">Haiti</option>
+                                        <option value="Hawaii">Hawaii</option>
+                                        <option value="Honduras">Honduras</option>
+                                        <option value="Hong Kong">Hong Kong</option>
+                                        <option value="Hungary">Hungary</option>
+                                        <option value="Iceland">Iceland</option>
+                                        <option value="Indonesia">Indonesia</option>
+                                        <option value="India">India</option>
+                                        <option value="Iran">Iran</option>
+                                        <option value="Iraq">Iraq</option>
+                                        <option value="Ireland">Ireland</option>
+                                        <option value="Isle of Man">Isle of Man</option>
+                                        <option value="Israel">Israel</option>
+                                        <option value="Italy">Italy</option>
+                                        <option value="Jamaica">Jamaica</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="Jordan">Jordan</option>
+                                        <option value="Kazakhstan">Kazakhstan</option>
+                                        <option value="Kenya">Kenya</option>
+                                        <option value="Kiribati">Kiribati</option>
+                                        <option value="Korea North">Korea North</option>
+                                        <option value="Korea Sout">Korea South</option>
+                                        <option value="Kuwait">Kuwait</option>
+                                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                        <option value="Laos">Laos</option>
+                                        <option value="Latvia">Latvia</option>
+                                        <option value="Lebanon">Lebanon</option>
+                                        <option value="Lesotho">Lesotho</option>
+                                        <option value="Liberia">Liberia</option>
+                                        <option value="Libya">Libya</option>
+                                        <option value="Liechtenstein">Liechtenstein</option>
+                                        <option value="Lithuania">Lithuania</option>
+                                        <option value="Luxembourg">Luxembourg</option>
+                                        <option value="Macau">Macau</option>
+                                        <option value="Macedonia">Macedonia</option>
+                                        <option value="Madagascar">Madagascar</option>
+                                        <option value="Malaysia">Malaysia</option>
+                                        <option value="Malawi">Malawi</option>
+                                        <option value="Maldives">Maldives</option>
+                                        <option value="Mali">Mali</option>
+                                        <option value="Malta">Malta</option>
+                                        <option value="Marshall Islands">Marshall Islands</option>
+                                        <option value="Martinique">Martinique</option>
+                                        <option value="Mauritania">Mauritania</option>
+                                        <option value="Mauritius">Mauritius</option>
+                                        <option value="Mayotte">Mayotte</option>
+                                        <option value="Mexico">Mexico</option>
+                                        <option value="Midway Islands">Midway Islands</option>
+                                        <option value="Moldova">Moldova</option>
+                                        <option value="Monaco">Monaco</option>
+                                        <option value="Mongolia">Mongolia</option>
+                                        <option value="Montserrat">Montserrat</option>
+                                        <option value="Morocco">Morocco</option>
+                                        <option value="Mozambique">Mozambique</option>
+                                        <option value="Myanmar">Myanmar</option>
+                                        <option value="Nambia">Nambia</option>
+                                        <option value="Nauru">Nauru</option>
+                                        <option value="Nepal">Nepal</option>
+                                        <option value="Netherland Antilles">Netherland Antilles</option>
+                                        <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                                        <option value="Nevis">Nevis</option>
+                                        <option value="New Caledonia">New Caledonia</option>
+                                        <option value="New Zealand">New Zealand</option>
+                                        <option value="Nicaragua">Nicaragua</option>
+                                        <option value="Niger">Niger</option>
+                                        <option value="Nigeria">Nigeria</option>
+                                        <option value="Niue">Niue</option>
+                                        <option value="Norfolk Island">Norfolk Island</option>
+                                        <option value="Norway">Norway</option>
+                                        <option value="Oman">Oman</option>
+                                        <option value="Pakistan">Pakistan</option>
+                                        <option value="Palau Island">Palau Island</option>
+                                        <option value="Palestine">Palestine</option>
+                                        <option value="Panama">Panama</option>
+                                        <option value="Papua New Guinea">Papua New Guinea</option>
+                                        <option value="Paraguay">Paraguay</option>
+                                        <option value="Peru">Peru</option>
+                                        <option value="Phillipines">Philippines</option>
+                                        <option value="Pitcairn Island">Pitcairn Island</option>
+                                        <option value="Poland">Poland</option>
+                                        <option value="Portugal">Portugal</option>
+                                        <option value="Puerto Rico">Puerto Rico</option>
+                                        <option value="Qatar">Qatar</option>
+                                        <option value="Republic of Montenegro">Republic of Montenegro</option>
+                                        <option value="Republic of Serbia">Republic of Serbia</option>
+                                        <option value="Reunion">Reunion</option>
+                                        <option value="Romania">Romania</option>
+                                        <option value="Russia">Russia</option>
+                                        <option value="Rwanda">Rwanda</option>
+                                        <option value="St Barthelemy">St Barthelemy</option>
+                                        <option value="St Eustatius">St Eustatius</option>
+                                        <option value="St Helena">St Helena</option>
+                                        <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                                        <option value="St Lucia">St Lucia</option>
+                                        <option value="St Maarten">St Maarten</option>
+                                        <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                                        <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                                        <option value="Saipan">Saipan</option>
+                                        <option value="Samoa">Samoa</option>
+                                        <option value="Samoa American">Samoa American</option>
+                                        <option value="San Marino">San Marino</option>
+                                        <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                                        <option value="Saudi Arabia">Saudi Arabia</option>
+                                        <option value="Senegal">Senegal</option>
+                                        <option value="Seychelles">Seychelles</option>
+                                        <option value="Sierra Leone">Sierra Leone</option>
+                                        <option value="Singapore">Singapore</option>
+                                        <option value="Slovakia">Slovakia</option>
+                                        <option value="Slovenia">Slovenia</option>
+                                        <option value="Solomon Islands">Solomon Islands</option>
+                                        <option value="Somalia">Somalia</option>
+                                        <option value="South Africa">South Africa</option>
+                                        <option value="Spain">Spain</option>
+                                        <option value="Sri Lanka">Sri Lanka</option>
+                                        <option value="Sudan">Sudan</option>
+                                        <option value="Suriname">Suriname</option>
+                                        <option value="Swaziland">Swaziland</option>
+                                        <option value="Sweden">Sweden</option>
+                                        <option value="Switzerland">Switzerland</option>
+                                        <option value="Syria">Syria</option>
+                                        <option value="Tahiti">Tahiti</option>
+                                        <option value="Taiwan">Taiwan</option>
+                                        <option value="Tajikistan">Tajikistan</option>
+                                        <option value="Tanzania">Tanzania</option>
+                                        <option value="Thailand">Thailand</option>
+                                        <option value="Togo">Togo</option>
+                                        <option value="Tokelau">Tokelau</option>
+                                        <option value="Tonga">Tonga</option>
+                                        <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                                        <option value="Tunisia">Tunisia</option>
+                                        <option value="Turkey">Turkey</option>
+                                        <option value="Turkmenistan">Turkmenistan</option>
+                                        <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                                        <option value="Tuvalu">Tuvalu</option>
+                                        <option value="Uganda">Uganda</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="Ukraine">Ukraine</option>
+                                        <option value="United Arab Erimates">United Arab Emirates</option>
+                                        <option value="United States of America">
+                                            United States of America
+                                        </option>
+                                        <option value="Uraguay">Uruguay</option>
+                                        <option value="Uzbekistan">Uzbekistan</option>
+                                        <option value="Vanuatu">Vanuatu</option>
+                                        <option value="Vatican City State">Vatican City State</option>
+                                        <option value="Venezuela">Venezuela</option>
+                                        <option value="Vietnam">Vietnam</option>
+                                        <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                                        <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                                        <option value="Wake Island">Wake Island</option>
+                                        <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                                        <option value="Yemen">Yemen</option>
+                                        <option value="Zaire">Zaire</option>
+                                        <option value="Zambia">Zambia</option>
+                                        <option value="Zimbabwe">Zimbabwe</option>
+                                    </datalist>
+                                </div>
+                                <div class="input-group mb-3 col-12 col-md-6">
+                                    <label class="sr-only" for="inputZip">Zip</label>
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="Zip">
+                                                <i class="fas fa-map-marked-alt"></i>
+                                            </span>
+                                    </div>
+                                    <input aria-describedby="Zip"
+                                           class="form-control rounded-pill-input border-white"
+                                           id="inputZip" name="inputZip"
+                                           placeholder="Zip"
+                                           required
+                                           type="number"/>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please enter your zip code.</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-3 col-12 col-md-6">
+                                    <label class="sr-only" for="inputPhone">Phone No.</label>
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="Phone">
+                                                <i class="fas fa-mobile-alt"></i>
+                                            </span>
+                                    </div>
+                                    <input aria-describedby="Phone"
+                                           class="form-control rounded-pill-input border-white"
+                                           id="inputPhone" name="inputPhone"
+                                           pattern="[0-9 +]{1,30}"
+                                           placeholder="Phone"
+                                           required
+                                           type="tel"/>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please enter your phone number.</div>
+                                </div>
+                                <div class="input-group mb-3 col-12 col-md-6">
+                                    <label class="sr-only" for="inputPhoneType">Phone Type</label>
+                                    <div class="input-group-prepend">
+                                            <span class="input-group-text border-white rounded-prepend" id="PhoneType">
+                                                <i class="fas fa-phone-alt"></i>
+                                            </span>
+                                    </div>
+                                    <input aria-describedby="PhoneType"
+                                           class="form-control rounded-pill-input border-white"
+                                           id="inputPhoneType" name="inputPhoneType"
+                                           pattern="[A-z]{1,20}"
+                                           placeholder="Phone Type (O, HP, etc)"
+                                           required
+                                           type="text"/>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please enter your phone type.</div>
+                                </div>
+                            </div>
+                            <div class="card-footer row">
+                                <a class="btn btn-lg px-1 col-5" href="login.html" role="button">Already have an
+                                    account?</a>
+                                <button class="btn btn-lg btn-primary px-1  col-5 offset-2"
+                                        id="btnRegisterSubmit"
+                                        type="submit">Register
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 <footer class="footer p-3">
     <div class="container">
@@ -176,34 +616,52 @@
         </div>
     </div>
 </footer>
-<div class="modal" id="myModal" role="dialog" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Register Your Interest Today!</h5>
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-center">
-                <p>We are excited to have you here with us.</p>
-                <p>Leave your email address here to be notified of our launch.</p>
-                <form action="" class="">
-                    <label class="sr-only" for="email">Email Address</label>
-                    <input class="form-control col-10 mx-auto" id="email" placeholder="Email Address" required
-                           type="email">
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                <button class="btn btn-primary" type="button">Submit</button>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
-<script crossorigin="anonymous"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+<script>
+    (function () {
+        "use strict";
+        window.addEventListener(
+            "load",
+            function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName("form");
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener(
+                        "submit",
+                        function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add("was-validated");
+                        },
+                        false
+                    );
+                });
+            },
+            false
+        );
+    })();
+    //confirm password
+    var password = document.getElementById("inputPassword");
+    var confirm_password = document.getElementById("inputConfirmPassword");
+
+    //validate if pw = cpw
+    function validatePassword() {
+        if (password.value != confirm_password.value) {
+            confirm_password.setCustomValidity('Password not match!!!');
+        } else {
+            confirm_password.setCustomValidity('');
+        }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onchange = validatePassword;
+    password.onkeyup = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+</script>
+<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="assets/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
 
