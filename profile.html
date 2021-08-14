@@ -14,6 +14,99 @@
     <link href="assets/css/themeAuth.css" rel="stylesheet">
     <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
 	<link href="assets/css/profile.css" rel="stylesheet">
+	<style>
+		[data-tab-content] {
+		display: none;
+	}
+
+	.active[data-tab-content] {
+		display: block;
+	}
+
+	.tabs {
+		display: flex;
+		justify-content: center;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px solid #5A6980;
+		color: #5A6980;
+	}
+
+	.tab {
+		cursor: pointer;
+		padding: 10px;
+	}
+
+		.tab.active {
+			color: #F7941D;
+		}
+
+		.tab:hover {
+			color: #F7941D;
+		}
+
+	.tab-content {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.modal-content {
+		margin: 10% auto;
+		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+		animation-name: modalopen;
+		animation-duration: var(--modal-duration);
+		position: relative;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		width: 80%;
+		pointer-events: auto;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: 0.3rem;
+		outline: 0;
+	}
+
+	.close {
+		color: #a6a6a6;
+		float: right;
+		font-size: 30px;
+		color: #a6a6a6;
+	}
+
+		.close:hover,
+		.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+
+	@keyframes modalopen {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+	</style>
 </head>
 
 <body>
@@ -83,7 +176,7 @@
 			<div id="general" data-tab-content class="active">
 				<div class="container mt-4">
 				<div class="row">
-					<div class="col-md-9 col-lg-8 py-6 mx-auto">
+					<div class="col-md-9 col-lg-12 py-6 mx-auto">
 					<div class="card card-body">
 						
 						<h5 class="mb-3" style="text-align:center">Account settings</h5>
@@ -140,7 +233,7 @@
 				</div>
 				<div class="container mt-4">
 				<div class= "row">
-				<div class="col-md-9 col-lg-8 py-6 mx-auto">
+				<div class="col-md-9 col-lg-12 py-6 mx-auto">
 					<div class="card card-body">
 						<h5 class="mb-3"style="text-align:center">Password</h5>
 						<form action="" class="passwordform align-items-center text-center" method="POST" novalidate>
@@ -205,30 +298,32 @@
 			<div id="poolaccounts" data-tab-content>
 			
 			<div class="container mt-4 align-items-center text-center">
-				<div class="row">
-				<div class="col-md-5 col-lg-8 py-6 mx-auto">
-						<div class="card card-body">
+				<div class="row align-items-center text-center">
+				<div class="col-md-5 col-lg-12 py-6 mx-auto">
+						<div class="card card-body align-items-center text-center">
 						<h5 class="mb-3">Pool accounts</h5>
 						<h6 class="mb-3">Please add your pool accounts here to recieve email notifications regarding  worker status.</h6>
-								<button class="btn btn-lg btn-primary px-1  col-5 offset-2" id="modal-btn" style="margin-left:200px"
+								<button class="btn btn-lg btn-primary px-1  col-5 offset-2" id="modal-btn" style="margin-left:40px" 
 										type="submit">Add Pool account</button>																				
 						</div>
 						
 				</div>
+				</div>
+			</div>
 				<div class="container mt-4">
-					<div class="row">
-					<div class="col-md-5 col-lg-8 py-6 mx-auto">
+					<div class="row" >
+					<div class="col-md-5 col-lg-12 py-6 mx-auto">
 					  <div id="my-modal" class="modal" >
 						<form class="modal-content" action="" novalidate>
-						  <div class="modal-header">							
-							<h3 class="modal-title text-center">Add Pool Account</h3>
+						  <div class="modal-header align-items-center text-center">							
+							<h5 class="modal-title ">Add Pool Account</h5>
 							<span class="close">&times;</span>
 						  </div>
 						  <div class="modal-body">
 							
-							<h6 class=" align-items-center text-center">Please enter your mining pool account details</h6>
+							<h6 class="mb-3">Please enter your mining pool account details</h6>
 							
-							<h6 class="mb-3">Mining Pool</h6>
+							<h6 class="mb-3 text-left">Mining Pool</h6>
 							<div class="input-group mb-3">							   								
 									<select class="form-control rounded-pill-input border-white"
 										   id="miningpoolP" 
@@ -244,7 +339,7 @@
 											<div class="valid-feedback">Looks Good!</div>
 										   <div class="invalid-feedback">Please select pool account</div>									
 							</div>
-							<h6 class="mb-3">Pool Account Username</h6>								
+							<h6 class="mb-3 text-left">Pool Account Username</h6>								
 							<div class="input-group mb-3">						
 							<input class="form-control rounded-pill-input border-white"
 										   id="usernameP" 
@@ -256,7 +351,7 @@
 										   <div class="valid-feedback">Looks Good!</div>
 										   <div class="invalid-feedback">Please check your username</div>	
 							</div>
-							<h6 class="mb-3">Pool Account API Key</h6>
+							<h6 class="mb-3 text-left">Pool Account API Key</h6>
 							<div class="input-group mb-3">	
 							<input class="form-control rounded-pill-input border-white"
 										   id="APIP" 
@@ -281,7 +376,7 @@
 					</div>
 				</div>
 				</div>
-				</div>
+				
 			</div>	
 	    </div>
 </div>
