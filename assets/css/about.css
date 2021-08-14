@@ -1,0 +1,33 @@
+#about {
+    position: relative;
+}
+
+#about.pt-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+#about .header {
+    line-height: 1.25 !important;
+    font-weight: 700;
+}
+
+.aboutBg {
+    width: 100%;
+    border-radius: 2.5rem 2.5rem 1rem 1rem;
+}
+
+.icon {
+    padding: 1rem 1.2rem 1rem 1.2rem;
+    border-radius: 15px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(247, 148, 29, 0.3);
+}
+
+.icon-primary {
+    color: #F7941D;
+}

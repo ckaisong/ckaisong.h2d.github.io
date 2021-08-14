@@ -1,0 +1,45 @@
+#faq{
+    position: relative;
+}
+
+#faq.pt-6{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+#faq .header{
+    line-height: 1.25 !important;
+    font-weight: 700;
+}
+
+.card{
+    border-radius: 0.5rem;
+}
+
+.card-bg {
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(0.625rem);
+    backdrop-filter: blur(0.625rem);
+    border: 0.125rem solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-link{
+    color: #0A2D56;
+    font-weight: bold;
+}
+
+.btn-link:focus {
+    text-decoration: none;
+}
+.btn-link:hover {
+    text-decoration: none;
+    color: #0A2D56;
+}
+
+.btn-check:focus + .btn, .btn:focus {
+    box-shadow: none;
+}
+
+.accordion .card-body p{
+    padding: 0.5rem 1.5rem;
+}

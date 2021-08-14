@@ -1,0 +1,70 @@
+#contact{
+    position: relative;
+}
+
+#contact.pt-6{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+#contact .header{
+    line-height: 1.25 !important;
+    font-weight: 700;
+}
+.card-bg {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(0.625rem);
+    backdrop-filter: blur(0.625rem);
+    border: 0.125rem solid rgba(243, 240, 237, 0.6);
+}
+.rounded-textarea{
+    border-radius: 0 1.25rem 1.25rem 0 !important;
+    border-left: none;
+}
+
+.rounded-pill-input {
+    border-radius: 0 50rem 50rem 0 !important;
+    border-left: none;
+}
+.rounded-prepend{
+    border-radius: 50rem 0 0 50rem !important;
+    background-color: #f4f6fa;
+    border-right: none;
+}
+.rounded-prepend-textarea{
+    border-radius: 1.25rem 0 0 1.25rem !important;
+    background-color: #f4f6fa;
+    border-right: none;
+}
+.rounded-prepend i, .rounded-prepend-textarea i{
+    padding-left: 1rem;
+}
+
+.input-group input, .input-group textarea{
+    padding-left: 0.5rem !important;
+}
+
+.icon {
+    padding: 1rem;
+    border-radius: 15px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(247, 148, 29, 0.3);
+}
+
+.icon-primary {
+    color: #F7941D;
+}
+
+.flex-1 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.border-white{
+    border-color: #d8dbdb !important;
+}

@@ -1,0 +1,78 @@
+#home .py-6 {
+    padding-top: 12rem !important;
+    padding-bottom: 4rem !important;
+}
+
+p.head {
+    font-size: 60px;
+}
+
+@media (max-width: 767px) {
+    p.head {
+        text-align: left;
+        color: #fefefe;
+    }
+
+    #home .bg-holder:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .5);
+    }
+}
+
+#home, #interestCheck,#mineWithUs, #service, #hardware{
+    position: relative;
+}
+
+#home.pt-6, #mineWithUs.pt-6, #service.pt-6, #hardware.pt-6{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+/* -------------------------------------------------------------------------- */
+/*                                    Flex                                    */
+/* -------------------------------------------------------------------------- */
+.flex-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.flex-between-center {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flex-end-center {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+
+#interestCheck .header, #mineWithUs .header, #service .header, #hardware .header{
+    line-height: 1.25 !important;
+    font-weight: 700;
+}
+
+#hardware{
+    color: whitesmoke;
+}
+
+.card-img-top img{
+    border-radius: 1rem;
+}

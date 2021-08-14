@@ -1,0 +1,92 @@
+	[data-tab-content] {
+		display: none;
+	}
+
+	.active[data-tab-content] {
+		display: block;
+	}
+
+	.tabs {
+		display: flex;
+		justify-content: center;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px solid #5A6980;
+		color: #5A6980;
+	}
+
+	.tab {
+		cursor: pointer;
+		padding: 10px;
+	}
+
+		.tab.active {
+			color: #F7941D;
+		}
+
+		.tab:hover {
+			color: #F7941D;
+		}
+
+	.tab-content {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.modal-content {
+		margin: 10% auto;
+		width: 40%;
+		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+		animation-name: modalopen;
+		animation-duration: var(--modal-duration);
+		position: relative;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		width: 60%;
+		pointer-events: auto;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: 0.3rem;
+		outline: 0;
+	}
+
+	.close {
+		color: #a6a6a6;
+		float: right;
+		font-size: 30px;
+		color: #a6a6a6;
+	}
+
+		.close:hover,
+		.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+
+	@keyframes modalopen {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
