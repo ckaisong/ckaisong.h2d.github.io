@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-          name="viewport">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no""
+          name="viewport" >
     <meta content="Daren Puan" name="author">
     <meta content="" name="description">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
@@ -14,99 +14,7 @@
     <link href="assets/css/themeAuth.css" rel="stylesheet">
     <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
 	<link href="assets/css/profile.css" rel="stylesheet">
-	<style>
-		[data-tab-content] {
-		display: none;
-	}
 
-	.active[data-tab-content] {
-		display: block;
-	}
-
-	.tabs {
-		display: flex;
-		justify-content: center;
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		border-bottom: 1px solid #5A6980;
-		color: #5A6980;
-	}
-
-	.tab {
-		cursor: pointer;
-		padding: 10px;
-	}
-
-		.tab.active {
-			color: #F7941D;
-		}
-
-		.tab:hover {
-			color: #F7941D;
-		}
-
-	.tab-content {
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-
-	.modal {
-		display: none;
-		position: fixed;
-		z-index: 1;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 100%;
-		overflow: auto;
-		background-color: rgba(0, 0, 0, 0.5);
-	}
-
-	.modal-content {
-		margin: 10% auto;
-		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-		animation-name: modalopen;
-		animation-duration: var(--modal-duration);
-		position: relative;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		width: 80%;
-		pointer-events: auto;
-		background-color: #fff;
-		background-clip: padding-box;
-		border: 1px solid rgba(0, 0, 0, 0.2);
-		border-radius: 0.3rem;
-		outline: 0;
-	}
-
-	.close {
-		color: #a6a6a6;
-		float: right;
-		font-size: 30px;
-		color: #a6a6a6;
-	}
-
-		.close:hover,
-		.close:focus {
-			color: #000;
-			text-decoration: none;
-			cursor: pointer;
-		}
-
-
-	@keyframes modalopen {
-		from {
-			opacity: 0;
-		}
-
-		to {
-			opacity: 1;
-		}
-	}
-	</style>
 </head>
 
 <body>
@@ -175,7 +83,7 @@
 		<div class="tab-content">
 			<div id="general" data-tab-content class="active">
 				<div class="container mt-4">
-				<div class="row">
+				<div class="row no-gutters">
 					<div class="col-md-9 col-lg-12 py-6 mx-auto">
 					<div class="card card-body">
 						
@@ -232,7 +140,7 @@
 				</div>
 				</div>
 				<div class="container mt-4">
-				<div class= "row">
+				<div class= "row no-gutters">
 				<div class="col-md-9 col-lg-12 py-6 mx-auto">
 					<div class="card card-body">
 						<h5 class="mb-3"style="text-align:center">Password</h5>
@@ -298,7 +206,7 @@
 			<div id="poolaccounts" data-tab-content>
 			
 			<div class="container mt-4 align-items-center text-center">
-				<div class="row align-items-center text-center">
+				<div class="row align-items-center text-center no-gutters">
 				<div class="col-md-5 col-lg-12 py-6 mx-auto">
 						<div class="card card-body align-items-center text-center">
 						<h5 class="mb-3">Pool accounts</h5>
@@ -311,7 +219,7 @@
 				</div>
 			</div>
 				<div class="container mt-4">
-					<div class="row" >
+					<div class="row no-gutters" >
 					<div class="col-md-5 col-lg-12 py-6 mx-auto">
 					  <div id="my-modal" class="modal" >
 						<form class="modal-content" action="" novalidate>
