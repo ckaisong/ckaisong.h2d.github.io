@@ -67,7 +67,6 @@
         </ul>
         <p class="mx-2 my-0"><small>&copy; Hash2Day.com<br>All Rights Reserved</small></p>
     </nav>
-	
 	<div id="content">
 		<button class="navbar-btn" id="sidebarCollapse" type="button">
             <span></span>
@@ -85,13 +84,13 @@
 				<div class="container mt-4">
 				<div class="row">
 					<div class="col-md-9 col-lg-12 py-6 mx-auto">
-					<div class="card card-body">
+					<div class="card card-body text-center">
 						
 						<h5 class="mb-3" style="text-align:center">Account settings</h5>
 						
-						<form  action="" class="userform align-items-center text-center" method="POST" novalidate>
+						<form  action="" class="userform" method="POST" novalidate>
 								
-								<h6 class="mb-3" style="float:left">Username</h6>
+								<h6 class="mb-3 text-left">Username</h6>
 								<div class="input-group mb-3">  
 																	
 									<div class="input-group-prepend">
@@ -110,7 +109,7 @@
 											<div class="valid-feedback">Looks Good!</div>
 											<div class="invalid-feedback">Please check your name</div>
 								</div>
-								<h6 class="mb-3" style="float:left">Email</h6>
+								<h6 class="mb-3 text-left">Email</h6>
 								<div class="input-group mb-3">
 								
 									<div class="input-group-prepend">
@@ -130,7 +129,7 @@
 										   <div class="invalid-feedback">Please check your email</div>
 								</div>
 													
-								<button class="btn btn-lg btn-primary px-1  col-5 offset-2"  style="margin-left:20px; min-width:150px" id="btnusernameSubmit"
+								<button class="btn btn-lg btn-primary px-1  col-5" id="btnusernameSubmit"
 										type="submit">Save changes
 								</button> 
 							
@@ -142,10 +141,10 @@
 				<div class="container mt-4">
 				<div class="row">
 					<div class="col-md-9 col-lg-12 py-6 mx-auto">
-					<div class="card card-body">
+					<div class="card card-body text-center">
 						<h5 class="mb-3"style="text-align:center">Password</h5>
-						<form action="" class="passwordform align-items-center text-center" method="POST" novalidate>
-								<h6 class="mb-3" style="float:left">Current password</h6>
+						<form action="" class="passwordform" method="POST" novalidate>
+								<h6 class="mb-3 text-left">Current password</h6>
 								<div class="input-group mb-3">                              
 									<div class="input-group-prepend">
 											<span class="input-group-text border-white rounded-prepend" id="oldpasswordicon">
@@ -161,7 +160,7 @@
 										   <div class="valid-feedback">Looks Good!</div>
 										   <div class="invalid-feedback">Minimum 8 has up/lowercase number and symbols</div>
 								</div>
-								<h6 class="mb-3" style="float:left">New password</h6>
+								<h6 class="mb-3 text-left">New password</h6>
 								<div class="input-group mb-3">							   
 									<div class="input-group-prepend">
 											<span class="input-group-text border-white rounded-prepend" id="newpasswordicon">
@@ -177,7 +176,7 @@
 										   <div class="valid-feedback">Looks Good!</div>
 										   <div class="invalid-feedback">Check your new password again</div>
 								</div> 
-								<h6 class="mb-3" style="float:left">Confirm password</h6>
+								<h6 class="mb-3 text-left">Confirm password</h6>
 								<div class="input-group mb-3">							   
 									<div class="input-group-prepend">
 											<span class="input-group-text border-white rounded-prepend" id="confirmpasswordicon">
@@ -193,7 +192,7 @@
 										   <div class="valid-feedback">Looks Good!</div>
 										   <div class="invalid-feedback">Password not match</div>
 								</div> 
-								<button class="btn btn-lg btn-primary px-1  col-5 offset-2" style="margin-left:20px; min-width:150px" id="btnpasswordSubmit"
+								<button class="btn btn-lg btn-primary px-1  col-5" id="btnpasswordSubmit"
 										type="submit">Save changes
 								</button>
 							  
@@ -203,93 +202,89 @@
 				</div>	
 				</div> 
 			</div>
+	
 			<div id="poolaccounts" data-tab-content>
-			
-			<div class="container mt-4">
-				<div class="row">
-					<div class="col-md-9 col-lg-12 py-6 mx-auto">
+				
+				<div class="container mt-4">
+					<div class="row">
+						<div class="col-md-9 col-lg-12 py-6 mx-auto">
 
-						<div class="card card-body align-items-center text-center">
-						<h5 class="mb-3">Pool accounts</h5>
-						<h6 class="mb-3" style="white-space: normal;">Please add your pool accounts here to recieve email notifications 
-																	regarding  worker status.</h6>
-								<button class="btn btn-lg btn-primary px-1  col-7 offset-2" id="modal-btn" style="margin-left:5px; min-width:150px" 
-										type="submit">Add Pool account</button>																				
+							<div class="card card-body align-items-center text-center">
+							<h5 class="mb-3">Pool accounts</h5>
+							<h6 class="mb-3" style="white-space: normal;">Please add your pool accounts here to recieve email notifications 
+																		regarding  worker status.</h6>
+									 <button class="btn btn-lg btn-primary px-1 col-8" data-target="#myModal"
+                                           data-toggle="modal">Add Pool Account</button>																		
+							</div>						
 						</div>
-						
 					</div>
 				</div>
 			</div>
-				<div class="container mt-4">
-					<div class="row no-gutters" >
-					<div class="col-md-9 col-lg-12 py-6 mx-auto">
-					  <div id="my-modal" class="modal" >
-						<form class="modal-content" action="" novalidate>
-						  <div class="modal-header align-items-center text-center">							
-							<h5 class="modal-title ">Add Pool Account</h5>
-							<span class="close">&times;</span>
-						  </div>
-						  <div class="modal-body">
-							
-							<h6 class="mb-3" style="white-space: normal;">Please enter your mining pool account details</h6>
-							
+		</div>
+	</div>	
+			
+		<div class="modal" id="myModal" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Pool Account</h5>
+							<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+								<span aria-hidden="true">&times;</span>
+							</button>
+					</div>
+					<form action="" class="modal-form" method="POST" novalidate>
+						<div class="modal-body text-center">										
+							<h6 class="mb-3" style="white-space: normal;">Please enter your mining pool account details</h6>						
 							<h6 class="mb-3 text-left">Mining Pool</h6>
-							<div class="input-group mb-3">							   								
+								<div class="input-group mb-3">							   								
 									<select class="form-control rounded-pill-input border-white"
-										   id="miningpoolP" 
-										   name="miningpoolP"
-										   placeholder=""
-										   required										   
-										   type="text"/>
-										   <option disabled selected value> -- select an pool account -- </option>
-										   <option value="pool1">poolAccount1</option>
-										   <option value="pool2">poolAccount2</option>
-										   
+											id="miningpoolP" 
+											name="miningpoolP"
+											placeholder=""
+											required										   
+											type="text"/>
+											<option disabled selected value> -- select an pool account -- </option>
+											<option value="pool1">poolAccount1</option>
+											<option value="pool2">poolAccount2</option>
 									</select>	
 											<div class="valid-feedback">Looks Good!</div>
-										   <div class="invalid-feedback">Please select pool account</div>									
-							</div>
-							<h6 class="mb-3 text-left">Pool Account Username</h6>								
-							<div class="input-group mb-3">						
-							<input class="form-control rounded-pill-input border-white"
-										   id="usernameP" 
-										   name="usernameP"
-										   placeholder=""
-										   pattern="[a-zA-z ,.'/-]+"
-										   required
-										   type="text"/>
-										   <div class="valid-feedback">Looks Good!</div>
-										   <div class="invalid-feedback">Please check your username</div>	
-							</div>
-							<h6 class="mb-3 text-left">Pool Account API Key</h6>
-							<div class="input-group mb-3">	
-							<input class="form-control rounded-pill-input border-white"
-										   id="APIP" 
-										   name="APIP"
-										   placeholder=""
-										   pattern="[a-z0-9 -]+"
-										   type="text"
-										   required />
-										   <div class="valid-feedback">Looks Good!</div>
-										   <div class="invalid-feedback">Please check your API</div>
-							</div>
-						  </div>
-						  <div class="modal-footer">
-							<button class="btn btn-lg btn-primary px-1 col-12 offset-2"  style="margin-left:20px" id="save"
-										type="submit">Save
-								</button>
-							  
-						  </div>
-						</form>
-					  </div>
-					</div>
-					</div>
+											<div class="invalid-feedback">Please select pool account</div>									
+								</div>
+									<h6 class="mb-3 text-left">Pool Account Username</h6>								
+										<div class="input-group mb-3">						
+										<input class="form-control rounded-pill-input border-white"
+													   id="usernameP" 
+													   name="usernameP"
+													   placeholder=""
+													   pattern="[a-zA-z ,.'/-]+"
+													   required
+													   type="text"/>
+													   <div class="valid-feedback">Looks Good!</div>
+													   <div class="invalid-feedback">Please check your username</div>	
+										</div>
+									<h6 class="mb-3 text-left">Pool Account API Key</h6>
+										<div class="input-group mb-3">	
+										<input class="form-control rounded-pill-input border-white"
+													   id="APIP" 
+													   name="APIP"
+													   placeholder=""
+													   pattern="[a-z0-9 -]+"
+													   type="text"
+													   required />
+													   <div class="valid-feedback">Looks Good!</div>
+													   <div class="invalid-feedback">Please check your API</div>
+										</div>
+						
+						</div>
+							<div class="modal-footer">
+									<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+									<button class="btn btn-primary"  type="submit">Save</button>
+							</div>	
+					</form>		
 				</div>
-				</div>
-				
-			</div>	
-	    </div>
-</div>
+			</div>
+		</div>
+
 </div>
 
 <script crossorigin="anonymous"
@@ -303,7 +298,7 @@
             "load",
             function () {
                 // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName("modal-content");
+                var forms = document.getElementsByClassName("modal-form");
                 // Loop over them and prevent submission
                 var validation = Array.prototype.filter.call(forms, function (form) {
                     form.addEventListener(
@@ -433,36 +428,10 @@
 		target.classList.add('active')
 	  })
 	})
-	
-	//modal
-	const modal = document.querySelector('#my-modal');
-	const modalBtn = document.querySelector('#modal-btn');
-	const closeBtn = document.querySelector('.close');
-
-	// Events
-	modalBtn.addEventListener('click', openModal);
-	closeBtn.addEventListener('click', closeModal);
-	window.addEventListener('click', outsideClick);
-
-	// Open
-	function openModal() {
-	  modal.style.display = 'block';
-	}
-
-	// Close
-	function closeModal() {
-	  modal.style.display = 'none';
-	}
-
-	// Close If Outside Click
-	function outsideClick(e) {
-	  if (e.target == modal) {
-		modal.style.display = 'none';
-	  }
-	}
-
 
 </script>
 </body>
 
 </html>
+
+				
